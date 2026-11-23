@@ -1,0 +1,424 @@
+{
+ "house_0": {
+  "anchorX": 0.5146,
+  "anchorY": 0.662,
+  "metersWide": 9.988
+ },
+ "trees_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.7298,
+  "metersWide": 10.694
+ },
+ "pond_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941,
+  "points": {
+   "center": [
+    0.5,
+    0.5298
+   ]
+  },
+  "mask": true
+ },
+ "house_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.6087,
+  "metersWide": 11.404
+ },
+ "house_2": {
+  "anchorX": 0.5535,
+  "anchorY": 0.628,
+  "metersWide": 10.577
+ },
+ "trees_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.7026,
+  "metersWide": 11.117
+ },
+ "trees_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.7298,
+  "metersWide": 9.268
+ },
+ "pond_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941,
+  "points": {
+   "center": [
+    0.5,
+    0.5298
+   ],
+   "spout": [
+    0.5,
+    0.4642
+   ],
+   "basin": [
+    0.5,
+    0.5298
+   ]
+  },
+  "mask": true
+ },
+ "gazebo_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.6756,
+  "metersWide": 6.336
+ },
+ "gazebo_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.7229,
+  "metersWide": 8.708
+ },
+ "gazebo_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.7229,
+  "metersWide": 8.708
+ },
+ "barn_0": {
+  "anchorX": 0.5457,
+  "anchorY": 0.6728,
+  "metersWide": 8.118
+ },
+ "barn_1": {
+  "anchorX": 0.5457,
+  "anchorY": 0.629,
+  "metersWide": 8.118
+ },
+ "barn_2": {
+  "anchorX": 0.571,
+  "anchorY": 0.604,
+  "metersWide": 7.722
+ },
+ "lantern_0": {
+  "anchorX": 0.3111,
+  "anchorY": 0.9143,
+  "metersWide": 2.022
+ },
+ "lantern_1": {
+  "anchorX": 0.3872,
+  "anchorY": 0.9143,
+  "metersWide": 2.022
+ },
+ "lantern_2": {
+  "anchorX": 0.3496,
+  "anchorY": 0.9143,
+  "metersWide": 2.022
+ },
+ "debris_rocks": {
+  "anchorX": 0.4915,
+  "anchorY": 0.5128,
+  "metersWide": 6.298
+ },
+ "debris_branches": {
+  "anchorX": 0.5561,
+  "anchorY": 0.6451,
+  "metersWide": 2.151
+ },
+ "debris_stump": {
+  "anchorX": 0.5,
+  "anchorY": 0.5451,
+  "metersWide": 9.984
+ },
+ "debris_weeds": {
+  "anchorX": 0.4196,
+  "anchorY": 0.5797,
+  "metersWide": 1.478
+ },
+ "pond_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941,
+  "points": {
+   "center": [
+    0.5,
+    0.5298
+   ],
+   "spout": [
+    0.5,
+    0.5199
+   ],
+   "basin": [
+    0.5,
+    0.5298
+   ]
+  },
+  "mask": true
+ },
+ "waterfall_0": {
+  "anchorX": 0.4282,
+  "anchorY": 0.6741,
+  "metersWide": 5.922,
+  "points": {
+   "lip0": [
+    0.464,
+    0.4599
+   ],
+   "splash": [
+    0.4461,
+    0.6638
+   ]
+  },
+  "mask": true
+ },
+ "waterfall_1": {
+  "anchorX": 0.4725,
+  "anchorY": 0.6704,
+  "metersWide": 9.401,
+  "points": {
+   "lip0": [
+    0.4951,
+    0.4309
+   ],
+   "splash": [
+    0.4838,
+    0.6639
+   ]
+  },
+  "mask": true
+ },
+ "waterfall_2": {
+  "anchorX": 0.2568,
+  "anchorY": 0.8649,
+  "metersWide": 4.725,
+  "points": {
+   "lip0": [
+    0.3092,
+    0.7135
+   ],
+   "lip1": [
+    0.4139,
+    0.532
+   ],
+   "lip2": [
+    0.5187,
+    0.3506
+   ],
+   "splash": [
+    0.2793,
+    0.852
+   ]
+  },
+  "mask": true
+ },
+ "flowers_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.529,
+  "metersWide": 4.449
+ },
+ "flowers_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.5249,
+  "metersWide": 4.449
+ },
+ "flowers_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.5184,
+  "metersWide": 4.449
+ },
+ "palm_0": {
+  "anchorX": 0.449,
+  "anchorY": 0.803,
+  "metersWide": 7.718
+ },
+ "palm_1": {
+  "anchorX": 0.449,
+  "anchorY": 0.803,
+  "metersWide": 7.718
+ },
+ "palm_2": {
+  "anchorX": 0.449,
+  "anchorY": 0.803,
+  "metersWide": 7.718
+ },
+ "house_0_L1": {
+  "anchorX": 0.5,
+  "anchorY": 0.517,
+  "metersWide": 9.662
+ },
+ "house_0_L2": {
+  "anchorX": 0.509,
+  "anchorY": 0.6412,
+  "metersWide": 9.86
+ },
+ "house_0_L3": {
+  "anchorX": 0.509,
+  "anchorY": 0.6503,
+  "metersWide": 9.86
+ },
+ "house_1_L1": {
+  "anchorX": 0.5,
+  "anchorY": 0.5494,
+  "metersWide": 9.82
+ },
+ "house_1_L2": {
+  "anchorX": 0.5,
+  "anchorY": 0.5897,
+  "metersWide": 9.82
+ },
+ "house_1_L3": {
+  "anchorX": 0.5,
+  "anchorY": 0.5897,
+  "metersWide": 9.82
+ },
+ "house_2_L1": {
+  "anchorX": 0.5674,
+  "anchorY": 0.5391,
+  "metersWide": 8.395
+ },
+ "house_2_L2": {
+  "anchorX": 0.5663,
+  "anchorY": 0.6741,
+  "metersWide": 9.86
+ },
+ "house_2_L3": {
+  "anchorX": 0.5663,
+  "anchorY": 0.6741,
+  "metersWide": 9.86
+ },
+ "stream_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941,
+  "mask": true
+ },
+ "stream_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941,
+  "mask": true
+ },
+ "stream_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941,
+  "mask": true
+ },
+ "ground_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941
+ },
+ "ground_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941
+ },
+ "hedges_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941
+ },
+ "hedges_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941
+ },
+ "hedges_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941
+ },
+ "hedgesf_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941
+ },
+ "hedgesf_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941
+ },
+ "hedgesf_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.5278,
+  "metersWide": 33.941
+ },
+ "bench": {
+  "anchorX": 0.5,
+  "anchorY": 0.7319,
+  "metersWide": 1.59
+ },
+ "grass_0": {
+  "anchorX": 0.475,
+  "anchorY": 0.6299,
+  "metersWide": 1.288
+ },
+ "grass_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.6237,
+  "metersWide": 1.911
+ },
+ "grass_2": {
+  "anchorX": 0.4361,
+  "anchorY": 0.6374,
+  "metersWide": 0.892
+ },
+ "flowers_0_y": {
+  "anchorX": 0.5025,
+  "anchorY": 0.5194,
+  "metersWide": 4.474
+ },
+ "flowers_1_y": {
+  "anchorX": 0.5,
+  "anchorY": 0.5184,
+  "metersWide": 4.449
+ },
+ "flowers_2_y": {
+  "anchorX": 0.5,
+  "anchorY": 0.5263,
+  "metersWide": 4.449
+ },
+ "flowers_0_q": {
+  "anchorX": 0.5,
+  "anchorY": 0.5174,
+  "metersWide": 4.711
+ },
+ "flowers_1_q": {
+  "anchorX": 0.5,
+  "anchorY": 0.5174,
+  "metersWide": 4.711
+ },
+ "flowers_2_q": {
+  "anchorX": 0.5,
+  "anchorY": 0.5174,
+  "metersWide": 4.711
+ },
+ "trees_0_dry": {
+  "anchorX": 0.5,
+  "anchorY": 0.7298,
+  "metersWide": 10.694
+ },
+ "trees_1_dry": {
+  "anchorX": 0.5,
+  "anchorY": 0.7026,
+  "metersWide": 11.117
+ },
+ "trees_2_dry": {
+  "anchorX": 0.5,
+  "anchorY": 0.7298,
+  "metersWide": 9.268
+ },
+ "palm_dry": {
+  "anchorX": 0.449,
+  "anchorY": 0.803,
+  "metersWide": 7.718
+ },
+ "leaves": {
+  "anchorX": 0.4993,
+  "anchorY": 0.5214,
+  "metersWide": 1.856
+ },
+ "wild": {
+  "anchorX": 0.477,
+  "anchorY": 0.6255,
+  "metersWide": 3.988
+ },
+ "island": {
+  "anchorX": 0.4985,
+  "anchorY": 0.5871,
+  "metersWide": 39.6,
+  "file": "island.webp"
+ }
+}

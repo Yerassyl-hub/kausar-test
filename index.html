@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    Relative base href: the build is served from a sub-path (artifact frames,
+    local servers). Replaced by `--base-href` when that flag is passed.
+  -->
+  <base href="./">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Кәусар — зікір бағы. Тегін, жарнамасыз.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="kausar">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Кәусар</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body { margin: 0; height: 100%; background: #F6F1E7; }
+    #boot {
+      position: fixed; inset: 0; z-index: 10;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 18px; padding: 24px; box-sizing: border-box;
+      background: #F6F1E7; color: #3B3428;
+      font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      text-align: center; transition: opacity .4s ease;
+    }
+    #boot.done { opacity: 0; pointer-events: none; }
+    #boot img { width: 96px; height: 96px; border-radius: 22px; animation: bob 2.4s ease-in-out infinite; }
+    @keyframes bob { 50% { transform: translateY(-6px); } }
+    #boot .bar { width: min(260px, 70vw); height: 8px; border-radius: 4px; background: #E6DCC8; overflow: hidden; }
+    #boot .fill { height: 100%; width: 0; background: #4E7A4A; border-radius: 4px; transition: width .3s ease; }
+    #boot .msg { min-height: 2.9em; max-width: 320px; }
+    #boot .pct { font-variant-numeric: tabular-nums; color: #7A6E5C; font-size: 13px; }
+    #boot button {
+      display: none; border: 0; border-radius: 14px; padding: 12px 22px;
+      background: #4E7A4A; color: #fff; font: inherit; font-weight: 600; cursor: pointer;
+    }
+    #boot.slow button, #boot.failed button { display: block; }
+    #boot.failed .bar, #boot.failed .pct { display: none; }
+    #boot .err { display: none; max-width: 320px; font-size: 12px; color: #9A5A4A; word-break: break-word; }
+    #boot.failed .err { display: block; }
+  </style>
+</head>
+<body>
+  <div id="boot" role="status" aria-live="polite">
+    <img src="icons/Icon-192.png" alt="">
+    <div class="bar"><div class="fill"></div></div>
+    <div class="pct">0%</div>
+    <div class="msg">Жүктелуде…<br>Загрузка…</div>
+    <div class="err"></div>
+    <button type="button" onclick="location.reload()">Қайта жүктеу / Перезагрузить</button>
+  </div>
+
+  <script>
+    // Loading screen: shows at once, real stage marks from flutter_bootstrap.js
+    // and from Dart (sprite loading), errors with a reload button.
+    (function () {
+      var el = document.getElementById('boot');
+      var fill = el.querySelector('.fill'), pct = el.querySelector('.pct');
+      var msg = el.querySelector('.msg'), err = el.querySelector('.err');
+      var shown = 0, target = 0.04, cap = 0.3, finished = false;
+
+      function draw() {
+        fill.style.width = (shown * 100).toFixed(1) + '%';
+        pct.textContent = Math.floor(shown * 100) + '%';
+      }
+      // Creep toward the next stage while a big file downloads, never past it.
+      var creep = setInterval(function () {
+        if (finished) return clearInterval(creep);
+        if (target < cap) target += (cap - target) * 0.02;
+        if (shown < target) { shown = target; draw(); }
+      }, 200);
+
+      window.kausarBoot = {
+        // Engine stages (0..0.45), from flutter_bootstrap.js.
+        stage: function (at, nextCap) {
+          target = Math.max(target, at); cap = Math.max(cap, nextCap || at);
+        },
+        // Dart: sprites and shaders, 0..1 -> 0.45..0.98.
+        progress: function (f) {
+          var v = 0.45 + 0.53 * f;
+          target = Math.max(target, v); cap = Math.max(cap, v);
+        },
+        fail: function (message) {
+          if (finished) return;
+          finished = true;
+          el.classList.add('failed');
+          msg.innerHTML = 'Ойын ашылмады. Қайта жүктеп көріңіз.<br>Игра не открылась. Попробуйте перезагрузить.';
+          err.textContent = String(message || '').slice(0, 300);
+        }
+      };
+
+      window.addEventListener('flutter-first-frame', function () {
+        finished = true;
+        shown = 1; draw();
+        el.classList.add('done');
+        setTimeout(function () { el.remove(); }, 500);
+      });
+
+      setTimeout(function () {
+        if (finished) return;
+        el.classList.add('slow');
+        msg.innerHTML = 'Жүктеу әдеттегіден ұзақ. Интернетті тексеріп, қайта жүктеңіз.<br>Загрузка идёт дольше обычного. Проверьте интернет и перезагрузите.';
+      }, 40000);
+
+      // No WebGL: the renderer cannot start at all — say so instead of a blank page.
+      try {
+        var c = document.createElement('canvas');
+        if (!(c.getContext('webgl2') || c.getContext('webgl'))) {
+          window.kausarBoot.fail('WebGL unavailable. Open the link in Chrome or Safari.');
+        }
+      } catch (e) {}
+
+      // Phones: cap the canvas pixel ratio at 2 (a 3x canvas costs 2.25x the
+      // memory and fill rate for no visible gain on a small screen).
+      try {
+        var real = window.devicePixelRatio || 1;
+        if (real > 2 && window.matchMedia('(pointer: coarse)').matches) {
+          Object.defineProperty(window, 'devicePixelRatio', { get: function () { return 2; }, configurable: true });
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

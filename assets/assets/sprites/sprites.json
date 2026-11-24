@@ -420,5 +420,95 @@
   "anchorY": 0.5871,
   "metersWide": 39.6,
   "file": "island.webp"
+ },
+ "greenhouse_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.6099,
+  "metersWide": 8.877
+ },
+ "greenhouse_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.6099,
+  "metersWide": 8.877
+ },
+ "greenhouse_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.6099,
+  "metersWide": 8.877
+ },
+ "arch_0": {
+  "anchorX": 0.5006,
+  "anchorY": 0.7984,
+  "metersWide": 4.302
+ },
+ "arch_1": {
+  "anchorX": 0.5554,
+  "anchorY": 0.6705,
+  "metersWide": 6.262
+ },
+ "arch_2": {
+  "anchorX": 0.5554,
+  "anchorY": 0.6705,
+  "metersWide": 6.262
+ },
+ "fountain_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.5522,
+  "metersWide": 7.349
+ },
+ "fountain_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.5522,
+  "metersWide": 7.349
+ },
+ "fountain_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.5522,
+  "metersWide": 7.349
+ },
+ "footbridge_0": {
+  "anchorX": 0.5,
+  "anchorY": 0.6354,
+  "metersWide": 4.799
+ },
+ "footbridge_1": {
+  "anchorX": 0.5,
+  "anchorY": 0.6354,
+  "metersWide": 4.799
+ },
+ "pergola_0": {
+  "anchorX": 0.4849,
+  "anchorY": 0.6717,
+  "metersWide": 8.458
+ },
+ "pergola_1": {
+  "anchorX": 0.4987,
+  "anchorY": 0.6689,
+  "metersWide": 8.197
+ },
+ "pergola_2": {
+  "anchorX": 0.5,
+  "anchorY": 0.6732,
+  "metersWide": 8.173
+ },
+ "pier": {
+  "anchorX": 0.6504,
+  "anchorY": 0.914,
+  "metersWide": 12.9
+ },
+ "boat_0": {
+  "anchorX": 0.4984,
+  "anchorY": 0.5639,
+  "metersWide": 4.031
+ },
+ "boat_1": {
+  "anchorX": 0.4984,
+  "anchorY": 0.5639,
+  "metersWide": 4.031
+ },
+ "boat_2": {
+  "anchorX": 0.4984,
+  "anchorY": 0.5911,
+  "metersWide": 4.031
  }
 }

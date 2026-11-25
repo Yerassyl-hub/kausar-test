@@ -32,9 +32,9 @@
   "metersWide": 12.2
  },
  "trees_1": {
-  "anchorX": 0.5494,
-  "anchorY": 0.8469,
-  "metersWide": 8.435
+  "anchorX": 0.5627,
+  "anchorY": 0.845,
+  "metersWide": 8.885
  },
  "trees_2": {
   "anchorX": 0.5553,
@@ -399,9 +399,9 @@
   "metersWide": 6.65
  },
  "trees_1_dry": {
-  "anchorX": 0.5449,
-  "anchorY": 0.8818,
-  "metersWide": 6.577
+  "anchorX": 0.5447,
+  "anchorY": 0.8893,
+  "metersWide": 6.75
  },
  "trees_2_dry": {
   "anchorX": 0.5737,
@@ -422,12 +422,6 @@
   "anchorX": 0.5125,
   "anchorY": 0.683,
   "metersWide": 1.316
- },
- "island": {
-  "anchorX": 0.4985,
-  "anchorY": 0.5871,
-  "metersWide": 39.6,
-  "file": "island.webp"
  },
  "greenhouse_0": {
   "anchorX": 0.5,
